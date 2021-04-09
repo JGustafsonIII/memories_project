@@ -12,7 +12,7 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 const CONNECTION_URL =
-  'mongodb+srv://gustafson:N8waT9t0QLmfPoZi@cluster0.w2imm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+  ;
 
 const PORT = process.env.PORT || 5000;
 
