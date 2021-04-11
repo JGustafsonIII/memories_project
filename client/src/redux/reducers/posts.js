@@ -1,10 +1,4 @@
-import {
-  FETCH_ALL,
-  CREATE,
-  UPDATE,
-  LIKE,
-  DELETE,
-} from '../constants/actionTypes';
+import { FETCH_ALL, CREATE, UPDATE, DELETE } from '../constants/actionTypes';
 export default (state = [], action) => {
   switch (action.type) {
     case FETCH_ALL:
@@ -12,7 +6,6 @@ export default (state = [], action) => {
     case CREATE:
       return [...state, action.payload];
     case UPDATE:
-    case LIKE:
       return state.map((item) =>
         item._id === action.payload._id ? action.payload : item
       );

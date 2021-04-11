@@ -11,9 +11,14 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 app.use('/posts', postRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Hello to Memories API!');
+});
+
 const CONNECTION_URL = process.env.MONGODB_URI;
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 /**
  * Used to connect to the database and start listening to the express server at port 5000
