@@ -63,7 +63,8 @@ const Post = ({ post, setCurrentId }) => {
           }}
         >
           <ThumbUpAltIcon fontSize='small' />
-          Like {post.likeCount}
+          &nbsp; Like &nbsp;
+          {post.likeCount}
         </Button>
         <Button
           size='small'
@@ -73,7 +74,7 @@ const Post = ({ post, setCurrentId }) => {
           }}
         >
           <DeleteIcon fontSize='small' />
-          Delete
+          &nbsp; Delete
         </Button>
       </CardActions>
     </Card>
